@@ -50,8 +50,8 @@ class RemoteFeedLoaderTests: XCTestCase {
     
     func test_load_deliversErrorOnNon200HTTPresponse() {
         let(sut, client) = makeSUT()
-        let samples = [199,201, 300, 400, 500].enumerated()
-        samples.forEach { index, code in
+        let samples = [199,201, 300, 400, 500]
+        samples.enumerated().forEach { index, code in
             var capturedErrors = [RemoteFeedLoader.Error]()
             
             sut.load { capturedErrors.append($0) }
