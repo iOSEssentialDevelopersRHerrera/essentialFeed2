@@ -4,15 +4,13 @@
 //
 //  Created by Ricardo Herrera Petit on 12/25/20.
 //
-public enum LoadFeedResult<Error: Swift.Error> {
+public enum LoadFeedResult{
     case success([FeedItem])
     case failure(Error)
 }
 
-extension LoadFeedResult:Equatable where Error:Equatable { }
 
 import Foundation
 protocol FeedLoader {
-    associatedtype Error: Swift.Error
-    func load(completion: @escaping (LoadFeedResult<Error>) -> Void)
+    func load(completion: @escaping (LoadFeedResult) -> Void)
 }
