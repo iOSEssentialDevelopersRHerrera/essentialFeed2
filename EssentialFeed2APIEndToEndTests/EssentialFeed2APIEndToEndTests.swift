@@ -24,9 +24,9 @@ class EssentialFeed2APIEndToEndTests: XCTestCase {
             XCTAssertEqual(items[7], expectedItem(at: 7))
             
         case let .failure(error)?:
-            XCTFail("Exoected success got feed result got \(error) instead")
+            XCTFail("Expected success got feed result got \(error) instead")
         default:
-            XCTFail("Expectected successful feed result, got no result intstead")
+            XCTFail("Expected successful feed result, got no result intstead")
         }
     }
     
