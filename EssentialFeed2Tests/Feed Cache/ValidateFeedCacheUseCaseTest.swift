@@ -13,9 +13,17 @@ class ValidateFeedCacheUseCaseTest: XCTestCase {
     func test_init_doesNotMessageTheStoreUponCreation() {
         let (_, store)  = makeSUT()
         
-        
-        
         XCTAssertEqual(store.receivedMessages, [])
+    }
+    
+    
+    func test_validateCache_deletesCacheOnRetrievalError() {
+        let (sut, store) = makeSUT()
+        
+        sut.validateCache()
+        store.completeRetrieval(with: anyNSError())
+        
+        XCTAssertEqual(store.receivedMessages, [.retrieve, .deleteCachedFeed])
     }
     
     //MARK: -Helpers
