@@ -46,7 +46,6 @@ class EssentialFeedCacheIntegrationTests: XCTestCase {
         let latestFeed = uniqueImageFeed().models
         
         save(firstFeed, with: sutToPerformFirstSave)
-        
         save(latestFeed, with: sutToPerformLastSave)
         
         expect(sutToPerformLoad, toLoad: latestFeed)
