@@ -118,7 +118,7 @@ class CacheFeeduseCase: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, store)
     }
-     
+    
     private func expect(_ sut:LocalFeedLoader, toCompleteWithError expectedError:NSError?, when action: () -> Void, file: StaticString = #file, line:UInt = #line) {
         let exp = expectation(description: "Wait for save completion")
         
