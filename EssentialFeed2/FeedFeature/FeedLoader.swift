@@ -4,13 +4,12 @@
 //
 //  Created by Ricardo Herrera Petit on 12/25/20.
 //
-public enum LoadFeedResult{
-    case success([FeedImage])
-    case failure(Error)
-}
-
 
 import Foundation
+
+public typealias LoadFeedResult = Result<[FeedImage],Error>
+
+
 public protocol FeedLoader {
     func load(completion: @escaping (LoadFeedResult) -> Void)
 }
