@@ -59,6 +59,7 @@
 		F6B83A4625B4CB7A0040DF6E /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B83A4525B4CB7A0040DF6E /* UIView+Shimmering.swift */; };
 		F6B83A5125B519450040DF6E /* FeedImageDataloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B83A5025B519450040DF6E /* FeedImageDataloader.swift */; };
 		F6B83A5825B51BF20040DF6E /* FeedRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B83A5725B51BF20040DF6E /* FeedRefreshViewController.swift */; };
+		F6B83A5F25B5235A0040DF6E /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B83A5E25B5235A0040DF6E /* FeedImageCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		F6B83A4525B4CB7A0040DF6E /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		F6B83A5025B519450040DF6E /* FeedImageDataloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataloader.swift; sourceTree = "<group>"; };
 		F6B83A5725B51BF20040DF6E /* FeedRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRefreshViewController.swift; sourceTree = "<group>"; };
+		F6B83A5E25B5235A0040DF6E /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +442,7 @@
 			children = (
 				F6B83A2725B3B5CA0040DF6E /* FeedViewController.swift */,
 				F6B83A5725B51BF20040DF6E /* FeedRefreshViewController.swift */,
+				F6B83A5E25B5235A0040DF6E /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				F6B83A4625B4CB7A0040DF6E /* UIView+Shimmering.swift in Sources */,
 				F6B83A2825B3B5CA0040DF6E /* FeedViewController.swift in Sources */,
 				F6B83A3525B3D6750040DF6E /* FeedImageCell.swift in Sources */,
+				F6B83A5F25B5235A0040DF6E /* FeedImageCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
