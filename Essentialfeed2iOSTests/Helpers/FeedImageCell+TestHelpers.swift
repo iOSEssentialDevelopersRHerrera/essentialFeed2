@@ -13,7 +13,7 @@ extension FeedImageCell {
         feedImageRetryButton.simulateTap()
     }
     
-    var isShowingLoaction: Bool {
+    var isShowingLocation: Bool {
         return !locationContainer.isHidden
     }
     
