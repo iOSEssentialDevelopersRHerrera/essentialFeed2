@@ -32,6 +32,8 @@ private final class MainQueueDispatchDecorator<T>  {
         guard Thread.isMainThread else {
             return DispatchQueue.main.async(execute: completion)
         }
+        
+        completion()
     }
     
 }
