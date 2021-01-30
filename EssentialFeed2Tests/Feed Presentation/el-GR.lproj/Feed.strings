@@ -1,0 +1,9 @@
+/* 
+  Feed.strings
+  EssentialFeed2
+
+  Created by Ricardo Herrera Petit on 1/30/21.
+  
+*/
+"FEED_VIEW_TITLE" = "To Feed uou";
+"FEED_VIEW_CONNECTION_ERROR" = "Δεν ήταν δυνατή η σύνδεση στο διακομιστή";
