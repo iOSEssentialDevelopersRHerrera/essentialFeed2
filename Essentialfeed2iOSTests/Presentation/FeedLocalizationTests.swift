@@ -3,7 +3,7 @@
 //
 
 import XCTest
-@testable import Essentialfeed2iOS
+import EssentialFeed2
 
 final class FeedLocalizationTests: XCTestCase {
     

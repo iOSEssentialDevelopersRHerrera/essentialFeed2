@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import EssentialFeed2
 
 
 final class FeedViewAdapter: FeedView {
