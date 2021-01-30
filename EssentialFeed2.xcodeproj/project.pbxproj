@@ -87,6 +87,7 @@
 		F6B83A8725B671050040DF6E /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B83A8625B671050040DF6E /* FeedImageViewModel.swift */; };
 		F6CC183C25C4D82300E4DC19 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC183B25C4D82300E4DC19 /* ErrorView.swift */; };
 		F6F524F725C4EBDB0090FFEA /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F524F625C4EBDB0090FFEA /* FeedErrorViewModel.swift */; };
+		F6F5250325C4EC750090FFEA /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5250225C4EC750090FFEA /* UIRefreshControl+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +225,7 @@
 		F6B83A8625B671050040DF6E /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
 		F6CC183B25C4D82300E4DC19 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F6F524F625C4EBDB0090FFEA /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
+		F6F5250225C4EC750090FFEA /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,6 +535,7 @@
 		F6B83A4F25B519030040DF6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6F5250925C4EC850090FFEA /* Helpers */,
 				F6B83A2E25B3D6220040DF6E /* FeedImageCell.swift */,
 				F6B83A4525B4CB7A0040DF6E /* UIView+Shimmering.swift */,
 				F6B4F0DE25BB9B7A0047FBAF /* Feed.storyboard */,
@@ -569,6 +572,14 @@
 				F62413E825BCEFD100DD6354 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
+			sourceTree = "<group>";
+		};
+		F6F5250925C4EC850090FFEA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F6F5250225C4EC750090FFEA /* UIRefreshControl+Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -882,6 +893,7 @@
 				F6B4F09F25B7EFB10047FBAF /* FeedPresenter.swift in Sources */,
 				F6B83A5125B519450040DF6E /* FeedImageDataloader.swift in Sources */,
 				F6CC183C25C4D82300E4DC19 /* ErrorView.swift in Sources */,
+				F6F5250325C4EC750090FFEA /* UIRefreshControl+Helpers.swift in Sources */,
 				F6B4F0CB25BA67C60047FBAF /* FeedViewModel.swift in Sources */,
 				F6B4F10F25BBDDF60047FBAF /* UITableView+Dequeueing.swift in Sources */,
 				F6B4F0C425BA67890047FBAF /* FeedLoadingViewModel.swift in Sources */,
