@@ -540,8 +540,6 @@
 				F6B83A4525B4CB7A0040DF6E /* UIView+Shimmering.swift */,
 				F6B4F0DE25BB9B7A0047FBAF /* Feed.storyboard */,
 				F6B4F0E525BB9BE10047FBAF /* Feed.xcassets */,
-				F6B4F10E25BBDDF60047FBAF /* UITableView+Dequeueing.swift */,
-				F6B4F11525BBDFB00047FBAF /* UIImageView+Animations.swift */,
 				F6CC183B25C4D82300E4DC19 /* ErrorView.swift */,
 			);
 			path = Views;
@@ -577,6 +575,8 @@
 		F6F5250925C4EC850090FFEA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F6B4F11525BBDFB00047FBAF /* UIImageView+Animations.swift */,
+				F6B4F10E25BBDDF60047FBAF /* UITableView+Dequeueing.swift */,
 				F6F5250225C4EC750090FFEA /* UIRefreshControl+Helpers.swift */,
 			);
 			path = Helpers;
