@@ -86,6 +86,7 @@
 		F6B83A6725B52B350040DF6E /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B83A6625B52B350040DF6E /* FeedUIComposer.swift */; };
 		F6B83A8725B671050040DF6E /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B83A8625B671050040DF6E /* FeedImageViewModel.swift */; };
 		F6CC183C25C4D82300E4DC19 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC183B25C4D82300E4DC19 /* ErrorView.swift */; };
+		F6F524F725C4EBDB0090FFEA /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F524F625C4EBDB0090FFEA /* FeedErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +223,7 @@
 		F6B83A6625B52B350040DF6E /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		F6B83A8625B671050040DF6E /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
 		F6CC183B25C4D82300E4DC19 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F6F524F625C4EBDB0090FFEA /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -563,6 +565,7 @@
 				F6B4F0BC25BA67490047FBAF /* FeedImagePresenter.swift */,
 				F6B4F0C325BA67890047FBAF /* FeedLoadingViewModel.swift */,
 				F6B4F0CA25BA67C60047FBAF /* FeedViewModel.swift */,
+				F6F524F625C4EBDB0090FFEA /* FeedErrorViewModel.swift */,
 				F62413E825BCEFD100DD6354 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
@@ -893,6 +896,7 @@
 				F624141625BD1BCB00DD6354 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				F6B83A8725B671050040DF6E /* FeedImageViewModel.swift in Sources */,
 				F6B83A5F25B5235A0040DF6E /* FeedImageCellController.swift in Sources */,
+				F6F524F725C4EBDB0090FFEA /* FeedErrorViewModel.swift in Sources */,
 				F624142425BD1C6900DD6354 /* FeedViewAdapter.swift in Sources */,
 				F6B83A6725B52B350040DF6E /* FeedUIComposer.swift in Sources */,
 			);
