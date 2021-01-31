@@ -7,10 +7,10 @@
 
 import XCTest
 
-class FeedImagePresenter {
-    private let view: ViewSpy
-    init(view: ViewSpy) {
-        self.view = view
+
+final class FeedImagePresenter {
+    init(view: Any) {
+        
     }
 }
 
@@ -24,13 +24,27 @@ class FeedImagePresenterTests: XCTestCase {
         
         XCTAssertTrue(view.messages.isEmpty, "Feed Image Presneter does not send messages to the view")
     }
-}
-
-
-//MARK: - Helpers
-
-class ViewSpy {
-    let messages = [Any]()
     
+    //MARK: - Helpers
+
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> (sut: FeedImagePresenter, view: ViewSpy) {
+        let view = ViewSpy()
+        let sut = FeedImagePresenter(view: view)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(view, file: file, line: line)
+        return (sut, view)
+       
+    }
+    
+    private class ViewSpy {
+        let messages = [Any]()
+        
+    }
+   
 }
+
+
+
+
+
 
