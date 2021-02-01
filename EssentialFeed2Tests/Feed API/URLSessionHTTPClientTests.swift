@@ -93,12 +93,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line )
         return sut
     }
-    
-    
-    private func anyData() -> Data {
-        return Data("any Data".utf8)
-    }
-    
+
     private func anyHTTPURLResponse() -> HTTPURLResponse {
         return HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
     }
