@@ -100,6 +100,7 @@
 		F6DF97F525CB85D500C6C714 /* CacheFeedImageDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF97F425CB85D500C6C714 /* CacheFeedImageDataUseCaseTests.swift */; };
 		F6DF97FC25CBA72400C6C714 /* CoreDataFeedImageDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF97FB25CBA72400C6C714 /* CoreDataFeedImageDataStoreTests.swift */; };
 		F6DF980325CBAE7D00C6C714 /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF980225CBAE7D00C6C714 /* CoreDataFeedStore+FeedImageDataLoader.swift */; };
+		F6DF980A25CCB73300C6C714 /* CoredataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF980925CCB73300C6C714 /* CoredataFeedStore+FeedStore.swift */; };
 		F6F5250325C4EC750090FFEA /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5250225C4EC750090FFEA /* UIRefreshControl+Helpers.swift */; };
 		F6F5251625C4EFD40090FFEA /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5251525C4EFD40090FFEA /* FeedPresenterTests.swift */; };
 /* End PBXBuildFile section */
@@ -252,6 +253,7 @@
 		F6DF97F425CB85D500C6C714 /* CacheFeedImageDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedImageDataUseCaseTests.swift; sourceTree = "<group>"; };
 		F6DF97FB25CBA72400C6C714 /* CoreDataFeedImageDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedImageDataStoreTests.swift; sourceTree = "<group>"; };
 		F6DF980225CBAE7D00C6C714 /* CoreDataFeedStore+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
+		F6DF980925CCB73300C6C714 /* CoredataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoredataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		F6F5250225C4EC750090FFEA /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		F6F5251525C4EFD40090FFEA /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -528,6 +530,7 @@
 				F6B8392525AFD8180040DF6E /* ManagedCache.swift */,
 				F6B8392A25AFD84B0040DF6E /* ManagedFeedImage.swift */,
 				F6DF980225CBAE7D00C6C714 /* CoreDataFeedStore+FeedImageDataLoader.swift */,
+				F6DF980925CCB73300C6C714 /* CoredataFeedStore+FeedStore.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 				F621498425C622270018F0EF /* FeedLoadingViewModel.swift in Sources */,
 				F61AD595259E98AB00A279B0 /* LocalFeedImage.swift in Sources */,
 				F61AD58B259E884F00A279B0 /* FeedStore.swift in Sources */,
+				F6DF980A25CCB73300C6C714 /* CoredataFeedStore+FeedStore.swift in Sources */,
 				F61AD586259E868F00A279B0 /* LocalFeedLoader.swift in Sources */,
 				F6050372259BD3AD00CF8EBC /* HTTPClient.swift in Sources */,
 				F6DF97DD25CA5C5B00C6C714 /* FeedImageDataStore.swift in Sources */,
