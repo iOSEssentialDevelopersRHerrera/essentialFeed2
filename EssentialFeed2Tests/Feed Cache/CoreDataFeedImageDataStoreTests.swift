@@ -11,14 +11,14 @@ import EssentialFeed2
 class CoreDataFeedImageDataStoreTests: XCTestCase {
     
     func test_retrieveImageData_deliversNotFoundWhenEmpty() {
-        let sut = makeUST()
+        let sut = makeSUT()
         
         expect(sut, toCompleteRetrievalwith: notFound(), for: anyURL())
         
     }
     
     func test_retrieveImageData_deliversNotFoundWhenStoreDataURLDoesNotMatch() {
-        let sut = makeUST()
+        let sut = makeSUT()
         let url = URL(string: "http://a-url.com")!
         let nonMatchingURL = URL(string: "http://snother-url.com")!
         
@@ -27,9 +27,20 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
         expect(sut, toCompleteRetrievalwith: notFound(), for: nonMatchingURL)
     }
     
+    func test_retrieveImageData_deliversFoundDataWhenThereIsAStoredImageDataMatchingURL() {
+        let sut = makeSUT()
+        let storedData = anyData()
+        let matchingURL = URL(string: "http://a-url.com")!
+        
+        insert(storedData, for: matchingURL, into: sut)
+        
+        expect(sut, toCompleteRetrievalwith: found(storedData), for: matchingURL)
+        
+    }
+    
     //MARK: - Helpers
     
-    private func makeUST(file: StaticString = #filePath, line: UInt = #line) -> CoreDataFeedStore {
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> CoreDataFeedStore {
         let storeBundle = Bundle(for: CoreDataFeedStore.self)
         let storeURL = URL(fileURLWithPath: "/dev/null")
         let sut = try! CoreDataFeedStore(storeURL: storeURL, bundle: storeBundle)
@@ -53,6 +64,10 @@ class CoreDataFeedImageDataStoreTests: XCTestCase {
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1.0)
+    }
+    
+    private func found(_ data: Data) -> FeedImageDataStore.RetrievalResult {
+        return .success(data)
     }
     
     private func localImage(url: URL) -> LocalFeedImage {
