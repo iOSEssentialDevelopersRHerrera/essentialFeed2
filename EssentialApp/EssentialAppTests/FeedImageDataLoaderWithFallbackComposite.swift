@@ -23,7 +23,7 @@ class FeedImageDataLoaderComposite: FeedImageDataLoader {
     }
     
     func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
-        primary.loadImageData(from: url) { _ in }
+        _ = primary.loadImageData(from: url) { _ in }
         return Task()
     }
 }
@@ -32,21 +32,18 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
     
      
     func test_init_doesNotLoadImageData() {
-        let primaryLoader = LoaderSpy()
-        let fallbackLoader = LoaderSpy()
-        _ = FeedImageDataLoaderComposite(primary: primaryLoader, fallback: fallbackLoader)
+        let (_ , primaryLoader, fallbackLoader) = makeSUT()
         
         XCTAssertTrue(primaryLoader.loadedURLs.isEmpty, "Expected no loaded URLs in the primary loader")
-        XCTAssertTrue(primaryLoader.loadedURLs.isEmpty, "Expected no loaded URLs in the primary loader")
+        XCTAssertTrue(fallbackLoader.loadedURLs.isEmpty, "Expected no loaded URLs in the primary loader")
     }
     
     func test_loadImageData_loadsFromPrimaryLoaderFirst() {
         let url = anyURL()
-        let primaryLoader = LoaderSpy()
-        let fallbackLoader = LoaderSpy()
-        let sut = FeedImageDataLoaderComposite(primary: primaryLoader, fallback: fallbackLoader)
+       
+        let (sut, primaryLoader, fallbackLoader) = makeSUT()
         
-        sut.loadImageData(from: anyURL()) { _ in }
+        _ = sut.loadImageData(from: anyURL()) { _ in }
         
         XCTAssertEqual(primaryLoader.loadedURLs, [url], "Expected to load URL from primary loader")
         XCTAssertTrue(fallbackLoader.loadedURLs.isEmpty)
@@ -54,6 +51,23 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
     
     
     //MARK: - Helpers
+    
+    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedImageDataLoaderComposite, primary: LoaderSpy, fallback: LoaderSpy) {
+        let primaryLoader = LoaderSpy()
+        let fallbackLoader = LoaderSpy()
+        let sut = FeedImageDataLoaderComposite(primary: primaryLoader, fallback: fallbackLoader)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(primaryLoader, file: file, line: line)
+        trackForMemoryLeaks(fallbackLoader, file: file, line: line)
+        return (sut, primaryLoader, fallbackLoader)
+        
+    }
+    
+    private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line ) {
+        addTeardownBlock {  [weak instance] in
+            XCTAssertNil(instance, "Instance should be deallocated. Potential memoery leak", file: file, line: line)
+        }
+    }
     
     private func anyURL() -> URL {
         return URL(string: "http://any-url.com")!
