@@ -6,38 +6,8 @@
 //
 
 import XCTest
+import EssentialApp
 import EssentialFeed2
-
-class FeedImageDataLoaderComposite: FeedImageDataLoader {
-   
-    private let primary: FeedImageDataLoader
-    private let fallback: FeedImageDataLoader
-    
-    private class TaskWrapper: FeedImageDataLoaderTask {
-        var wrapped: FeedImageDataLoaderTask?
-        func cancel() {
-            wrapped?.cancel()
-        }
-    }
-    
-    init(primary: FeedImageDataLoader, fallback: FeedImageDataLoader) {
-        self.primary = primary
-        self.fallback = fallback
-    }
-    
-    func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
-        let task = TaskWrapper()
-        task.wrapped = primary.loadImageData(from: url) { [weak self] result in
-            switch result {
-            case .success:
-                completion(result)
-            case .failure:
-                task.wrapped = self?.fallback.loadImageData(from: url, completion: completion)
-            }
-        }
-        return task
-    }
-}
 
 class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
     
@@ -147,7 +117,7 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
             switch(receivedResult, expectedResult) {
             case let (.success(receivedFeed), .success(expectedFeed)):
                 XCTAssertEqual(receivedFeed, expectedFeed, file: file, line: line)
-            case let (.failure, .failure):
+            case (.failure, .failure):
                 break
             default:
                 XCTFail("Expected \(expectedResult) got \(receivedResult) instead", file: file, line:line)
