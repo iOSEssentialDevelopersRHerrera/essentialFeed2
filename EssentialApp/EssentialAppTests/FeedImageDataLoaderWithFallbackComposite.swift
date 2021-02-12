@@ -163,6 +163,5 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
     }
 }
 
-//MARK: - Helpers
 
 
