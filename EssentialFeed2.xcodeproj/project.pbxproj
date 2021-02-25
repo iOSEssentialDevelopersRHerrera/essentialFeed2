@@ -103,6 +103,7 @@
 		F6DF980A25CCB73300C6C714 /* CoredataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DF980925CCB73300C6C714 /* CoredataFeedStore+FeedStore.swift */; };
 		F6F5250325C4EC750090FFEA /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5250225C4EC750090FFEA /* UIRefreshControl+Helpers.swift */; };
 		F6F5251625C4EFD40090FFEA /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F5251525C4EFD40090FFEA /* FeedPresenterTests.swift */; };
+		F6FFEA3725E7485900423AC3 /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFEA3625E7485900423AC3 /* FeedCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +257,7 @@
 		F6DF980925CCB73300C6C714 /* CoredataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoredataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		F6F5250225C4EC750090FFEA /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		F6F5251525C4EFD40090FFEA /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
+		F6FFEA3625E7485900423AC3 /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -495,6 +497,7 @@
 				F67B6ADA2596A5060010ECEB /* FeedImage.swift */,
 				F67B6ADE2596A62C0010ECEB /* FeedLoader.swift */,
 				F6B83A5025B519450040DF6E /* FeedImageDataloader.swift */,
+				F6FFEA3625E7485900423AC3 /* FeedCache.swift */,
 			);
 			path = FeedFeature;
 			sourceTree = "<group>";
@@ -931,6 +934,7 @@
 				F608077625AE82050009FDDB /* CoreDataFeedStore.swift in Sources */,
 				F6DF980325CBAE7D00C6C714 /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */,
 				F62149C925C646890018F0EF /* FeedImagePresenter.swift in Sources */,
+				F6FFEA3725E7485900423AC3 /* FeedCache.swift in Sources */,
 				F6B8392B25AFD84B0040DF6E /* ManagedFeedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
