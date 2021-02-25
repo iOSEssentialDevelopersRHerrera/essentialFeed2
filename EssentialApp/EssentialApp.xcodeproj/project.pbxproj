@@ -26,6 +26,7 @@
 		F6DF985D25CCD9AA00C6C714 /* EssentialFeed2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6DF985B25CCD9AA00C6C714 /* EssentialFeed2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6DF986025CCD9AF00C6C714 /* Essentialfeed2iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DF985F25CCD9AF00C6C714 /* Essentialfeed2iOS.framework */; };
 		F6DF986125CCD9AF00C6C714 /* Essentialfeed2iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6DF985F25CCD9AF00C6C714 /* Essentialfeed2iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6FFEA3E25E7493600423AC3 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFEA3D25E7493600423AC3 /* FeedLoaderCacheDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F6DF984D25CCD8C300C6C714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6DF985B25CCD9AA00C6C714 /* EssentialFeed2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DF985F25CCD9AF00C6C714 /* Essentialfeed2iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Essentialfeed2iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6FFEA3D25E7493600423AC3 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				F6DF984D25CCD8C300C6C714 /* Info.plist */,
 				F6C52B9D25D246EE0090AD97 /* FeedLoaderWithFallbackComposite.swift */,
 				F6CA79DD25D391CB0065D72D /* FeedImageDataLoaderComposite.swift */,
+				F6FFEA3D25E7493600423AC3 /* FeedLoaderCacheDecorator.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				F6DF984425CCD8C300C6C714 /* ViewController.swift in Sources */,
 				F6DF984025CCD8C300C6C714 /* AppDelegate.swift in Sources */,
 				F6C52B9E25D246EE0090AD97 /* FeedLoaderWithFallbackComposite.swift in Sources */,
+				F6FFEA3E25E7493600423AC3 /* FeedLoaderCacheDecorator.swift in Sources */,
 				F6DF984225CCD8C300C6C714 /* SceneDelegate.swift in Sources */,
 				F6CA79DE25D391CB0065D72D /* FeedImageDataLoaderComposite.swift in Sources */,
 			);
