@@ -1,20 +1,15 @@
 //
-//  EssentialAppUIAcceptanceTests.swift
-//  EssentialAppUIAcceptanceTests
-//
-//  Created by Ricardo Herrera Petit on 3/3/21.
+//  Copyright © 2019 Essential Developer. All rights reserved.
 //
 
 import XCTest
 
 class EssentialAppUIAcceptanceTests: XCTestCase {
-
-    func test_onLaunch_displayRemoteFeedWhenCustomerHasConnectivity() {
-        
+    
+    func test_onLaunch_displaysRemoteFeedWhenCustomerHasConnectivity() {
         let app = XCUIApplication()
         app.launchArguments = ["-reset"]
         app.launch()
-        
         
         let feedCells = app.cells.matching(identifier: "feed-image-cell")
         XCTAssertEqual(feedCells.count, 22)
@@ -27,11 +22,11 @@ class EssentialAppUIAcceptanceTests: XCTestCase {
         let onlineApp = XCUIApplication()
         onlineApp.launchArguments = ["-reset"]
         onlineApp.launch()
-        
+
         let offlineApp = XCUIApplication()
         offlineApp.launchArguments = ["-connectivity", "offline"]
         offlineApp.launch()
-        
+
         let cachedFeedCells = offlineApp.cells.matching(identifier: "feed-image-cell")
         XCTAssertEqual(cachedFeedCells.count, 22)
         
@@ -43,8 +38,9 @@ class EssentialAppUIAcceptanceTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["-reset", "-connectivity", "offline"]
         app.launch()
-        
+
         let feedCells = app.cells.matching(identifier: "feed-image-cell")
         XCTAssertEqual(feedCells.count, 0)
     }
+    
 }
