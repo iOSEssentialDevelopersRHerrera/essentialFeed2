@@ -4,6 +4,7 @@
 
 import UIKit
 import EssentialFeed2
+import Essentialfeed2iOS
 
 public final class FeedUIComposer {
     private init() {}
