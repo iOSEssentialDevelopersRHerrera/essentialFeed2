@@ -18,13 +18,14 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Install provisioning profile
+    - name: Install Development provisioning profile
       run: |
         gpg --quiet --batch --yes --decrypt --passphrase="${{ secrets.SECRET_KEY }}" --output .github/deployment/profile.mobileprovision .github/deployment/profile.mobileprovision.gpg
         mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
         cp .github/deployment/profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+    
         
-    - name: Install keychain certificate
+    - name: Install keychain development certificate
       run: |
         gpg --quiet --batch --yes --decrypt --passphrase="${{ secrets.SECRET_KEY }}" --output .github/deployment/certificate.p12 .github/deployment/certificate.p12.gpg
         security create-keychain -p "" build.keychain
@@ -33,6 +34,17 @@ jobs:
         security default-keychain -s ~/Library/Keychains/build.keychain
         security unlock-keychain -p "" ~/Library/Keychains/build.keychain
         security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
+    
+    - name: Install keychain distribution certificate
+      run: |
+        gpg --quiet --batch --yes --decrypt --passphrase="${{ secrets.SECRET_KEY }}" --output .github/deployment/distributioncertificate.p12 .github/deployment/distributioncertificate.p12.gpg
+        security create-keychain -p "" build.keychain
+        security import .github/deployment/distributioncertificate.p12 -t agg -k ~/Library/Keychains/build.keychain -P "${{ secrets.CERTIFICATE_PASSWORD }}" -A
+        security list-keychains -s ~/Library/Keychains/build.keychain
+        security default-keychain -s ~/Library/Keychains/build.keychain
+        security unlock-keychain -p "" ~/Library/Keychains/build.keychain
+        security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
+
         
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_12.4.app
