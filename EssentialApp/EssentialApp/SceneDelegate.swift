@@ -77,6 +77,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 
+extension FeedCache {
+    func saveIgnoringResult(_ feed: [FeedImage]) {
+        save(feed) { _ in }
+    }
+}
+
 extension FeedLoader {
   public  typealias Publisher = AnyPublisher<[FeedImage], Error>
    public func loadPublisher() -> Publisher {
